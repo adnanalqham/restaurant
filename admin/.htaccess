@@ -1,0 +1,7 @@
+# Ensure PHP files are served with correct content type
+AddType application/x-httpd-php .php
+
+# Prevent API JSON interception
+<FilesMatch "\.php$">
+    Header set Content-Type "text/html; charset=UTF-8"
+</FilesMatch>
